@@ -1,0 +1,2 @@
+<meta property="og:image" content="<?php echo base_url()?>asset/<?php echo $foto?><?=$post_news->gambar?>">
+<meta property="og:image:url" content="<?php echo base_url()?>asset/<?php echo $foto?><?=$post_news->gambar?>">

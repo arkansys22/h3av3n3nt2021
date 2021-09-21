@@ -1,0 +1,8 @@
+[25-Dec-2018 16:31:58 UTC] PHP Parse error:  syntax error, unexpected 'else' (T_ELSE), expecting function (T_FUNCTION) in /home/fajar/public_html/alpa/application/controllers/Administrator.php on line 1578
+[25-Dec-2018 16:37:16 UTC] PHP Parse error:  syntax error, unexpected '{', expecting '(' in /home/fajar/public_html/alpa/application/controllers/Administrator.php on line 1562
+[25-Dec-2018 16:56:13 UTC] PHP Parse error:  syntax error, unexpected '{', expecting '(' in /home/fajar/public_html/alpa/application/controllers/Administrator.php on line 1562
+[28-Dec-2018 14:37:21 UTC] PHP Fatal error:  Cannot redeclare Administrator::edit_list_pt() in /home/fajar/public_html/alpa/application/controllers/Administrator.php on line 1515
+[28-Dec-2018 14:37:27 UTC] PHP Fatal error:  Cannot redeclare Administrator::edit_list_pt() in /home/fajar/public_html/alpa/application/controllers/Administrator.php on line 1515
+[29-Dec-2018 14:59:30 UTC] PHP Parse error:  syntax error, unexpected '', $this->data);' (T_CONSTANT_ENCAPSED_STRING) in /home/fajar/public_html/alpa/application/controllers/Privatetrip.php on line 54
+[30-Dec-2018 12:37:55 UTC] PHP Parse error:  syntax error, unexpected 'post_news' (T_STRING) in /home/fajar/public_html/alpa/application/controllers/Privatetrip.php on line 114
+[30-Dec-2018 12:37:57 UTC] PHP Parse error:  syntax error, unexpected 'post_news' (T_STRING) in /home/fajar/public_html/alpa/application/controllers/Privatetrip.php on line 114

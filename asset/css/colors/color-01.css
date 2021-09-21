@@ -1,0 +1,236 @@
+
+
+/* Primary Color :
+	- Slider Heading, Menu & Drop Downs, Buttons, Heading labels.
+
+Secondary Color :
+	- Hover colors for buttons(Read more, Owl Navigation). */
+
+/* Primary Colors */
+body ::selection {
+	background:#9400D3;
+	color:white;
+}
+
+body ::-moz-selection {
+	background:#9400D3;
+	color:white;
+}
+
+a:hover {
+	color: #9400D3;
+}
+
+.label-default {
+    background: #9400D3;
+}
+
+h2:after,
+h3:after,
+h4:after,
+h5:after,
+.slash:after,
+.heading-separator:before,
+.heading .heading-separator-line:after {
+	color: #9400D3;
+}
+
+.list-type1 li:before,
+.award-list li:before {
+	color: #9400D3;
+}
+
+.panel-title:not(.collapsed) h5,
+.panel-title:hover h5,
+.panel-heading a h5::after,
+.panel-heading a.collapsed:hover h5::after {
+    color: #9400D3;
+}
+
+q:before,
+*[class*="quotes"]::before {
+	color: #9400D3;
+}
+
+button.close,
+button.close:hover {
+    background: #9400D3;
+}
+
+.cube {
+	background: #9400D3;
+}
+
+.btn-3,
+.btn-3:hover,
+.btn-3:active {
+    background: #9400D3;
+}
+
+.read-more,
+.read-more:hover {
+	background: #9400D3;
+}
+
+.selected1,
+.selected1:hover,
+.navbar-nav > li:hover > a,
+.navbar-nav > li > a:focus,
+.navbar-nav > .open > a,
+.navbar-nav > .open > a:hover,
+.navbar-nav > .open > a:focus,
+.navbar-nav > li > a.selected {
+    color: #9400D3!important;
+}
+
+.navbar .dropdown-menu,
+.slicknav_nav {
+    background: #9400D3;
+}
+
+.skew-strip-logo:before {
+    background: #9400D3;
+}
+
+.count {
+    background: #9400D3;
+}
+
+.button-back {
+	background: #9400D3;
+}
+
+.news-section.active .accordion-toggle:before {
+	color: #9400D3;
+}
+
+.cbp_tmtimeline > li .cbp_tmicon {
+	box-shadow: 0 0 0 6px #9400D3;
+}
+
+.cbp_tmtimeline:before {
+	background: #9400D3;
+}
+
+.feature-icon-small:before {
+    color: #9400D3;
+}
+
+.navigation_button,
+.navigation_button1:hover {
+    background-color: #9400D3;
+}
+
+.modal-table tr:nth-child(odd) {
+    background: #9400D3;
+}
+
+.filters li {
+	color: #9400D3;
+}
+
+.owl-theme .owl-controls .owl-buttons div {
+	background: #9400D3;
+}
+
+.address li:before {
+	color: #9400D3;
+}
+
+.home_title_type span {
+	color:#9400D3;
+}
+
+#home-screen .content-block h1 span {
+    color: #9400D3;
+}
+
+.strip-content .call i:before {
+    color: #9400D3;
+}
+
+.owl-theme .owl-controls .owl-page span {
+	background: #9400D3;
+}
+/* Primary Colors */
+
+/* RGBA For Primary Color */
+figure.caption-bottom-strip figcaption {
+    background: rgba(51, 178, 110, .8);
+}
+
+.testi_btn {
+	background: rgba(51, 178, 110, .7);
+}
+
+.testi_btn:hover {
+	background: rgba(51, 178, 110, .98);
+}
+
+.architect-service:hover {
+    background: rgba(51, 178, 110, .8);
+}
+
+.caption-type-2 .caption1 {
+	background: rgba(51, 178, 110, .9);
+}
+
+#contact_form input:focus,
+#contact_form textarea:focus,
+input:valid:focus {
+  	/* IE6-9 */
+    -webkit-box-shadow: 0 2px 0px rgba(0, 0, 0, 0.075), 0 3px 0px rgba(51, 178, 110,0.8);
+    -moz-box-shadow: 0 2px 0px rgba(0, 0, 0, 0.075), 0 3px 0px rgba(51, 178, 110,0.8);
+    box-shadow: 0 2px 0px rgba(0, 0, 0, 0.075), 0 3px 0px rgba(51, 178, 110,0.8);
+}
+
+.spmenu {
+	background: rgba(51, 178, 110, .85);
+}
+
+.spmenu:before {
+	border-color: rgba(51, 178, 110, .85) transparent transparent transparent;
+}
+
+.nicescroll-rails div {
+	background: rgba(51, 178, 110, 1)!important;
+}
+/* // RGBA For Primary Color */
+
+/* Secondary Color */
+.button-back:hover {
+	background: #53c688;
+}
+
+.cbp_tmtimeline > li .cbp_tmicon {
+	background: #53c688;
+}
+
+.owl-theme .owl-controls .owl-buttons div:hover {
+	background: #53c688;
+}
+
+.navigation_button:hover,
+.navigation_button1 {
+	background-color: #53c688;
+}
+
+.modal-table tr {
+    background: #53c688;
+}
+/* Secondary Color */
+
+/* Light Color */
+.filters li a:hover, .filters li a.selected {
+    border-bottom: 2px solid #82dcac;
+}
+
+a.reverse {
+    border-bottom: 2px solid #82dcac;
+}
+/* // Light Color */
+
+/* Dark BG */
+.darkbg {
+    background: #2c3e50;
+}

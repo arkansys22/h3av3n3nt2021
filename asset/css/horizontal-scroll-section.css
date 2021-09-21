@@ -1,0 +1,248 @@
+
+/* Horzontal Settings
+=================================================== */
+html, body {
+	height:100%;
+}
+
+body {
+	height:100%;
+	overflow:hidden;
+}
+
+#wrapper {
+	width:100%;
+	height:100%;
+	position:absolute;
+	top:0;left:0;
+	overflow: hidden;	
+}
+
+#mask {
+	width:500%;
+	height:100%;
+}
+
+.wrapper-section {
+	width:20%;
+	height:100%;
+	float:left;
+	display:inline-block;
+	overflow:hidden;
+}
+
+.content-overlay-left {
+	left:0;
+	right:auto;
+}
+
+.content-overlay-right {
+	left:auto;
+	right:0;
+}
+
+.content {
+	height:100%;
+	width:100%;
+	margin:0 auto;
+	position:relative;
+	z-index:98;
+	*margin-top:65px;
+}
+
+.content-overlay {
+	width:50%;
+	height:100%;
+	right:0px;
+	display:block;
+	background: rgba(255,255,255,0.93);
+	position: absolute;
+	/*z-index:0;*/
+	z-index:auto;
+}
+
+.content-overlay-one-fourth {
+	width:25%;
+}
+
+.content-overlay-halfwidth {
+	width:50%;
+}
+
+.content-overlay-three-fourth {
+	width:75%;
+}
+
+.content-overlay-fullwidth {
+	width:100%;
+}
+
+/* For One Fourth */
+.content-overlay-one-fourth [class*="col-lg-"],
+.content-overlay-one-fourth [class*="col-md-"],
+.content-overlay-one-fourth [class*="col-sm-"],
+.content-overlay-one-fourth [class*="col-xs-"] {
+	width:100%;
+	margin-left:0;
+	margin-right:0;
+}
+
+.content-overlay-one-fourth [class*="media-"] {
+	display:block;
+	width:100%;
+}
+/* // For One Fourth */
+
+/* Content Inner */
+.content-inner {
+	padding-top:85px;
+	height:100%;
+}
+/* // Content Inner */
+
+/* Scrollbar */
+@media (min-width : 992px) {
+.contentscroll {
+	overflow-y: auto;
+    overflow-x: hidden;
+    height: 100%;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-right: 0;
+}
+}
+/* // Scrollbar */
+
+
+/* Container */
+@media (min-width: 1201px) {
+.content-overlay-halfwidth .container, 
+.content-overlay-three-fourth .container {
+    width: auto;
+    padding-left: 50px;
+    padding-right: 15%;
+}
+
+.content-overlay-one-fourth .container {
+	width: auto;
+	padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Newly Added */
+.content-overlay-left.content-overlay-halfwidth .container, 
+.content-overlay-left.content-overlay-three-fourth .container {
+	width: auto;
+    padding-right: 50px;
+    padding-left: 20%;
+}
+
+.content-overlay-left.content-overlay-three-fourth .container {
+    padding-left: 13%;
+}
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+
+.content-overlay-halfwidth .container,
+.content-overlay-three-fourth .container {
+	width: auto;
+	padding-left: 50px;
+    padding-right: 45px;
+}
+
+.content-overlay-one-fourth .container {
+	width: auto;
+	padding-left: 15px;
+    padding-right: 15px;
+}
+
+}
+/* // Container */
+
+.fullBg {
+	position: absolute;
+	top: 0;
+	overflow: hidden;
+	min-height:100%;
+	min-width:100%;
+	z-index:777;
+}	
+
+@media (max-width : 991px) {
+	.content-overlay {
+		float:none;
+		width:100%;
+		height: auto;
+		position:relative;
+	}
+	
+	.contentscroll-mobile {
+		overflow-y: auto;
+		height: 100%;
+		margin-top: 0;
+		margin-bottom: 0;
+		margin-right: 0;
+	}
+	
+	.content-inner {
+		padding-top: 65px;
+	}
+}
+
+/* // Horzontal Settings
+=================================================== */
+
+/* Images For Three Fourth / Half Width / One Fourth Sections
+======================================================================= */
+.fit-image {
+	background-size:cover;
+	position:absolute;
+	left:0;
+	right:0;
+	top:0;
+	bottom:0;
+}
+
+@media (max-width:991px) {
+.fit-image {
+	position:relative;
+	min-height:450px;
+}
+
+.content-inner-padtop0 {  /* Use Only if fit-image is present */
+	padding-top:0;
+}
+}
+
+/* // Images For Three Fourth / Half Width / One Fourth Sections
+======================================================================= */
+
+/* Background color for content section
+==================================================== */
+.content-overlay-bg-color {
+	background:rgba(221, 221, 221, .98);
+}
+
+/* // Background color for content section
+==================================================== */
+
+
+/* Sections Animation */
+.hide-element {
+	opacity:0;
+}
+
+#main-menu nav.navbar {
+	transform:translate(0, -100px);
+	-webkit-transform:translate(0, -100px);
+	-moz-transform:translate(0, -100px);
+	-ms-transform:translate(0, -100px);
+}
+
+#main-menu nav.navbar.navbar-fixed-bottom {
+	transform:translate(0, 100px);
+	-webkit-transform:translate(0, 100px);
+	-moz-transform:translate(0, 100px);
+	-ms-transform:translate(0, 100px);
+}
