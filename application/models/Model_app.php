@@ -13,6 +13,29 @@ class Model_app extends CI_model{
     public $table_blogs = 'blogs_tbl';
     public $table_galeri = 'galeri_tbl';
 
+    public function get_by_id_post($ids,$table_ids,$table_nama,$judul_seo)
+    {
+
+        $this->db->where($table_ids, $ids);
+        $this->db->or_where($judul_seo, $ids);
+        return $this->db->get($table_nama)->row();
+    }
+    function get_by_id_post_2($ids)
+     {
+       $this->db->where($this->id, $ids);
+       $this->db->or_where('judul_seo', $ids);
+       // $this->db->join('users', 'users.id_users = tbl_pelatihan.id_users','inner');
+       return $this->db->get('galeri_tbl')->result_array();
+     }
+
+    function get_by_id_post_galeri_detail($ids)
+    {
+      $this->db->where('galeri_detail_tbl.galeri_tbl_id_berita', $ids);
+      $this->db->or_where('galeri_tbl.id_berita', $ids);
+      $this->db->join('galeri_tbl', 'galeri_tbl.id_berita = galeri_detail_tbl.galeri_tbl_id_berita','inner');
+      return $this->db->get('galeri_detail_tbl')->result_array();
+    }
+
 
     public function view($table){
         return $this->db->get($table);
@@ -21,6 +44,7 @@ class Model_app extends CI_model{
     public function insert($table,$data){
         return $this->db->insert($table, $data);
     }
+
 
     public function edit($table, $data){
         return $this->db->get_where($table, $data);
