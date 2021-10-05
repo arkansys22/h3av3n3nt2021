@@ -859,43 +859,11 @@ class Administrator extends CI_Controller {
 
 					$config['upload_path'] = 'asset/foto_galeri/';
 	        $config['allowed_types'] = 'gif|jpg|png|JPG|JPEG';
-	        $config['max_size'] = '1000'; // kb
 	        $this->load->library('upload', $config);
 	        $this->upload->do_upload('img1');
 	        $img1=$this->upload->data();
           $config['source_image'] = 'asset/foto_galeri/'.$img1['file_name'];
 
-					$config['upload_path'] = 'asset/foto_galeri/';
-	        $config['allowed_types'] = 'gif|jpg|png|JPG|JPEG';
-	        $config['max_size'] = '1000'; // kb
-	        $this->load->library('upload', $config);
-	        $this->upload->do_upload('img2');
-	        $img2=$this->upload->data();
-          $config['source_image'] = 'asset/foto_galeri/'.$img2['file_name'];
-
-					$config['upload_path'] = 'asset/foto_galeri/';
-	        $config['allowed_types'] = 'gif|jpg|png|JPG|JPEG';
-	        $config['max_size'] = '1000'; // kb
-	        $this->load->library('upload', $config);
-	        $this->upload->do_upload('img3');
-	        $img3=$this->upload->data();
-          $config['source_image'] = 'asset/foto_galeri/'.$img3['file_name'];
-
-					$config['upload_path'] = 'asset/foto_galeri/';
-	        $config['allowed_types'] = 'gif|jpg|png|JPG|JPEG';
-	        $config['max_size'] = '1000'; // kb
-	        $this->load->library('upload', $config);
-	        $this->upload->do_upload('img4');
-	        $img4=$this->upload->data();
-          $config['source_image'] = 'asset/foto_galeri/'.$img4['file_name'];
-
-					$config['upload_path'] = 'asset/foto_galeri/';
-	        $config['allowed_types'] = 'gif|jpg|png|JPG|JPEG';
-	        $config['max_size'] = '1000'; // kb
-	        $this->load->library('upload', $config);
-	        $this->upload->do_upload('img5');
-	        $img5=$this->upload->data();
-          $config['source_image'] = 'asset/foto_galeri/'.$img5['file_name'];
 
 
             if ($this->session->level == 'kontributor'){ $status = 'y'; }else{ $status = 'Y'; }
@@ -922,7 +890,7 @@ class Administrator extends CI_Controller {
 				$tags2[] = seo_title($t);
 			}
 			$tags = implode(",", $tags2);
-            if ($img1['file_name']=='' && $img2['file_name']=='' && $img3['file_name']=='' && $img4['file_name']=='' && $img5['file_name']==''){
+            if ($img1['file_name']=='' ){
                     $data = array('id_kategori'=>$this->db->escape_str($this->input->post('a')),
                                     'username'=>$this->session->username,
                                     'judul'=>$this->db->escape_str($this->input->post('b')),
@@ -935,72 +903,6 @@ class Administrator extends CI_Controller {
 																		'meta_desc'=>$this->input->post('meta'),
 																		'tag'=>$tag,
                                     'status'=>$status);
-            }else if ($img2['file_name']=='' && $img3['file_name']=='' && $img4['file_name']=='' && $img5['file_name']==''){
-                    $data = array('id_kategori'=>$this->db->escape_str($this->input->post('a')),
-                                    'username'=>$this->session->username,
-                                    'judul'=>$this->db->escape_str($this->input->post('b')),
-                                    'judul_seo'=>seo_title($this->input->post('b')),
-                                    'nama'=>$this->db->escape_str($this->input->post('e')),
-                                    'hari'=>hari_ini(date('w')),
-                                    'tanggal'=>date('Y-m-d'),
-                                    'jam'=>date('H:i:s'),
-                                    'gambar'=>$img1['file_name'],
-                                    'views'=>'0',
-																		'meta_desc'=>$this->input->post('meta'),
-																		'tag'=>$tag,
-                                    'status'=>$status);
-
-            }else if ($img3['file_name']=='' && $img4['file_name']=='' && $img5['file_name']==''){
-                    $data = array('id_kategori'=>$this->db->escape_str($this->input->post('a')),
-                                    'username'=>$this->session->username,
-                                    'judul'=>$this->db->escape_str($this->input->post('b')),
-                                    'judul_seo'=>seo_title($this->input->post('b')),
-                                    'nama'=>$this->db->escape_str($this->input->post('e')),
-                                    'hari'=>hari_ini(date('w')),
-                                    'tanggal'=>date('Y-m-d'),
-                                    'jam'=>date('H:i:s'),
-                                    'gambar'=>$img1['file_name'],
-																		'gambar2'=>$img2['file_name'],
-                                    'views'=>'0',
-																		'meta_desc'=>$this->input->post('meta'),
-																		'tag'=>$tag,
-                                    'status'=>$status);
-
-            }else if ($img4['file_name']=='' && $img5['file_name']==''){
-                    $data = array('id_kategori'=>$this->db->escape_str($this->input->post('a')),
-                                    'username'=>$this->session->username,
-                                    'judul'=>$this->db->escape_str($this->input->post('b')),
-                                    'judul_seo'=>seo_title($this->input->post('b')),
-                                    'nama'=>$this->db->escape_str($this->input->post('e')),
-                                    'hari'=>hari_ini(date('w')),
-                                    'tanggal'=>date('Y-m-d'),
-                                    'jam'=>date('H:i:s'),
-                                    'gambar'=>$img1['file_name'],
-																		'gambar2'=>$img2['file_name'],
-																		'gambar3'=>$img3['file_name'],
-                                    'views'=>'0',
-																		'meta_desc'=>$this->input->post('meta'),
-																		'tag'=>$tag,
-                                    'status'=>$status);
-
-            }else if ($img5['file_name']==''){
-                    $data = array('id_kategori'=>$this->db->escape_str($this->input->post('a')),
-                                    'username'=>$this->session->username,
-                                    'judul'=>$this->db->escape_str($this->input->post('b')),
-                                    'judul_seo'=>seo_title($this->input->post('b')),
-                                    'nama'=>$this->db->escape_str($this->input->post('e')),
-                                    'hari'=>hari_ini(date('w')),
-                                    'tanggal'=>date('Y-m-d'),
-                                    'jam'=>date('H:i:s'),
-                                    'gambar'=>$img1['file_name'],
-																		'gambar2'=>$img2['file_name'],
-																		'gambar3'=>$img3['file_name'],
-																		'gambar4'=>$img4['file_name'],
-                                    'views'=>'0',
-																		'meta_desc'=>$this->input->post('meta'),
-																		'tag'=>$tag,
-                                    'status'=>$status);
-
             }else{
                     $data = array('id_kategori'=>$this->db->escape_str($this->input->post('a')),
                                     'username'=>$this->session->username,
@@ -1011,10 +913,6 @@ class Administrator extends CI_Controller {
                                     'tanggal'=>date('Y-m-d'),
                                     'jam'=>date('H:i:s'),
 																		'gambar'=>$img1['file_name'],
-																		'gambar2'=>$img2['file_name'],
-																		'gambar3'=>$img3['file_name'],
-																		'gambar4'=>$img4['file_name'],
-																		'gambar5'=>$img5['file_name'],
                                     'views'=>'0',
 																		'meta_desc'=>$this->input->post('meta'),
 																		'tag'=>$tag,
@@ -1024,7 +922,7 @@ class Administrator extends CI_Controller {
             $this->model_app->insert('galeri_tbl',$data);
 			redirect('administrator/listgaleri');
 		}else{
-			 		$data['get_combo_kategori'] = $this->Kategori_model->get_combo_kategori_galeri();
+
             $data['tag'] = $this->model_app->view_ordering('tag','id_tag','DESC');
             $data['galeri'] = $this->model_app->view_ordering('kategori_galeri','id_kategori','DESC');
 			$this->template->load('administrator/template','administrator/mod_galeri/view_tambah',$data);
@@ -1034,63 +932,12 @@ class Administrator extends CI_Controller {
 		cek_session_akses OR cek_session_akses_2('listgaleri',$this->session->id_session);
 		$id = $this->uri->segment(3);
 		if (isset($_POST['submit'])){
-					$config['upload_path'] = 'asset/foto_galeri/';
-	        $config['allowed_types'] = 'gif|jpg|png|JPG|JPEG';
-
-					$this->upload->initialize($config);
-					$this->upload->do_upload('img1');
-					$img1=$this->upload->data();
-					$config['image_library']='gd2';
-					$config['source_image'] = './asset/foto_galeri/'.$img1['file_name'];
-					$config['create_thumb']= FALSE;
-					$config['maintain_ratio']= FALSE;
-					$config['new_image']= './asset/foto_galeri/'.$img1['file_name'];
-					$this->load->library('image_lib', $config);
-					$this->image_lib->resize();
-
-					$this->upload->initialize($config);
-					$this->upload->do_upload('img2');
-					$img2=$this->upload->data();
-					$config['image_library']='gd2';
-					$config['source_image'] = './asset/foto_galeri/'.$img2['file_name'];
-					$config['create_thumb']= FALSE;
-					$config['maintain_ratio']= FALSE;
-					$config['new_image']= './asset/foto_galeri/'.$img2['file_name'];
-					$this->load->library('image_lib', $config);
-					$this->image_lib->resize();
-
-					$this->upload->initialize($config);
-					$this->upload->do_upload('img3');
-					$img3=$this->upload->data();
-					$config['image_library']='gd2';
-					$config['source_image'] = './asset/foto_galeri/'.$img3['file_name'];
-					$config['create_thumb']= FALSE;
-					$config['maintain_ratio']= FALSE;
-					$config['new_image']= './asset/foto_galeri/'.$img3['file_name'];
-					$this->load->library('image_lib', $config);
-					$this->image_lib->resize();
-
-					$this->upload->initialize($config);
-					$this->upload->do_upload('img4');
-					$img4=$this->upload->data();
-					$config['image_library']='gd2';
-					$config['source_image'] = './asset/foto_galeri/'.$img4['file_name'];
-					$config['create_thumb']= FALSE;
-					$config['maintain_ratio']= FALSE;
-					$config['new_image']= './asset/foto_galeri/'.$img4['file_name'];
-					$this->load->library('image_lib', $config);
-					$this->image_lib->resize();
-
-					$this->upload->initialize($config);
-					$this->upload->do_upload('img5');
-					$img5=$this->upload->data();
-					$config['image_library']='gd2';
-					$config['source_image'] = './asset/foto_galeri/'.$img5['file_name'];
-					$config['create_thumb']= FALSE;
-					$config['maintain_ratio']= FALSE;
-					$config['new_image']= './asset/foto_galeri/'.$img5['file_name'];
-					$this->load->library('image_lib', $config);
-					$this->image_lib->resize();
+			$config['upload_path'] = 'asset/foto_galeri/';
+			$config['allowed_types'] = 'gif|jpg|png|JPG|JPEG';
+			$this->load->library('upload', $config);
+			$this->upload->do_upload('gambar');
+			$hasil22=$this->upload->data();
+			$config['source_image'] = 'asset/foto_galeri/'.$hasil22['file_name'];
 
 
 						if ($this->session->level == 'kontributor'){ $status = 'y'; }else{ $status = 'Y'; }
@@ -1119,89 +966,29 @@ class Administrator extends CI_Controller {
 			}
 			$tags = implode(",", $tags2);
 
-						if ($img1['file_name']=='' && $img2['file_name']=='' && $img3['file_name']=='' && $img4['file_name']=='' && $img5['file_name']==''){
+						if ($hasil22['file_name']==''){
 						$data = array('id_kategori'=>$this->db->escape_str($this->input->post('a')),
 													'username'=>$this->session->username,
 													'judul'=>$this->db->escape_str($this->input->post('b')),
 													'judul_seo'=>seo_title($this->input->post('b')),
 													'meta_desc'=>$this->input->post('meta'),
-													'tag'=>$tag,
-													'nama'=>$this->db->escape_str($this->input->post('e')));
+													'tag'=>$tag);
 
-
-						}else if($img2['file_name']=='' && $img3['file_name']=='' && $img4['file_name']=='' && $img5['file_name']==''){
+						}else{
 										$data = array('id_kategori'=>$this->db->escape_str($this->input->post('a')),
 																		'username'=>$this->session->username,
 																		'judul'=>$this->db->escape_str($this->input->post('b')),
 																		'judul_seo'=>seo_title($this->input->post('b')),
-																		'nama'=>$this->db->escape_str($this->input->post('e')),
 																		'meta_desc'=>$this->input->post('meta'),
 																		'tag'=>$tag,
-																		'gambar'=>$img1['file_name']);
-
-						}else if($img1['file_name']=='' && $img3['file_name']=='' && $img4['file_name']=='' && $img5['file_name']==''){
-										$data = array('id_kategori'=>$this->db->escape_str($this->input->post('a')),
-																		'username'=>$this->session->username,
-																		'judul'=>$this->db->escape_str($this->input->post('b')),
-																		'judul_seo'=>seo_title($this->input->post('b')),
-																		'nama'=>$this->db->escape_str($this->input->post('e')),
-																		'meta_desc'=>$this->input->post('meta'),
-																		'tag'=>$tag,
-																		'gambar2'=>$img2['file_name']);
-
-						}else if($img3['file_name']=='' && $img4['file_name']=='' && $img5['file_name']==''){
-										$data = array('id_kategori'=>$this->db->escape_str($this->input->post('a')),
-																		'username'=>$this->session->username,
-																		'judul'=>$this->db->escape_str($this->input->post('b')),
-																		'judul_seo'=>seo_title($this->input->post('b')),
-																		'nama'=>$this->db->escape_str($this->input->post('e')),
-																		'meta_desc'=>$this->input->post('meta'),
-																		'tag'=>$tag,
-																		'gambar'=>$img1['file_name'],
-																		'gambar2'=>$img2['file_name']);
-						}else if($img4['file_name']=='' && $img5['file_name']==''){
-										$data = array('id_kategori'=>$this->db->escape_str($this->input->post('a')),
-																		'username'=>$this->session->username,
-																		'judul'=>$this->db->escape_str($this->input->post('b')),
-																		'judul_seo'=>seo_title($this->input->post('b')),
-																		'nama'=>$this->db->escape_str($this->input->post('e')),
-																		'meta_desc'=>$this->input->post('meta'),
-																		'tag'=>$tag,
-																		'gambar'=>$img1['file_name'],
-																		'gambar2'=>$img2['file_name'],
-																		'gambar3'=>$img3['file_name']
-																	);
-						}else if($img5['file_name']==''){
-										$data = array('id_kategori'=>$this->db->escape_str($this->input->post('a')),
-																		'username'=>$this->session->username,
-																		'judul'=>$this->db->escape_str($this->input->post('b')),
-																		'judul_seo'=>seo_title($this->input->post('b')),
-																		'nama'=>$this->db->escape_str($this->input->post('e')),
-																		'meta_desc'=>$this->input->post('meta'),
-																		'tag'=>$tag,
-																		'gambar'=>$img1['file_name'],
-																		'gambar2'=>$img2['file_name'],
-																		'gambar3'=>$img3['file_name'],
-																		'gambar4'=>$img4['file_name']
-																	);
+																		'gambar'=>$hasil22['file_name']);
+																		$where = array('id_berita' => $this->input->post('id'));
+																		$_image = $this->db->get_where('galeri_tbl',$where)->row();
+																		$query = $this->db->update('galeri_tbl',$data,$where);
+																		if($query){
+																			unlink("asset/foto_galeri/".$_image->gambar);
+																		}
 						}
-						else {
-										$data = array('id_kategori'=>$this->db->escape_str($this->input->post('a')),
-																		'username'=>$this->session->username,
-																		'judul'=>$this->db->escape_str($this->input->post('b')),
-																		'judul_seo'=>seo_title($this->input->post('b')),
-																		'nama'=>$this->db->escape_str($this->input->post('e')),
-																		'meta_desc'=>$this->input->post('meta'),
-																		'tag'=>$tag,
-																		'gambar'=>$img1['file_name'],
-																		'gambar2'=>$img2['file_name'],
-																		'gambar3'=>$img3['file_name'],
-																		'gambar4'=>$img4['file_name'],
-																		'gambar5'=>$img5['file_name']
-																	);
-						}
-						$where = array('id_berita' => $this->input->post('id'));
-			$this->model_app->update('galeri_tbl', $data, $where);
 			redirect('administrator/listgaleri');
 		}else{
 			$tag = $this->model_app->view_ordering('tag','id_tag','DESC');
@@ -1217,13 +1004,14 @@ class Administrator extends CI_Controller {
 	}
 	function delete_listgaleri(){
         cek_session_akses OR cek_session_akses_2('listgaleri',$this->session->id_session);
-        if ($this->session->level=='admin'){
-    		$id = array('id_berita' => $this->uri->segment(3));
-        }else{
-            $id = array('id_berita' => $this->uri->segment(3), 'username'=>$this->session->username);
-        }
-		$this->model_app->delete('galeri_tbl',$id);
-		redirect('administrator/listgaleri');
+				$id = $this->uri->segment(3);
+				$_id = $this->db->get_where('galeri_tbl',['id_berita' => $id])->row();
+				$query = $this->db->delete('galeri_tbl',['id_berita'=>$id]);
+			 	if($query){
+								 unlink("./asset/foto_galeri/".$_id->gambar);
+			 }
+			redirect('administrator/listgaleri');
+
 	}
 
 	function listgaleri_detail()
@@ -1243,6 +1031,41 @@ class Administrator extends CI_Controller {
 				cek_session_akses('listgaleri',$this->session->id_session);
 				$this->template->load('administrator/template','administrator/mod_galeri/view_detail',$data);
 
+	}
+	public function listgaleri_detail_tambahkan()
+	{
+		cek_session_akses('listgaleri_detail',$this->session->id_session);
+		$ids = $this->uri->segment(3);
+		if (isset($_POST['submit'])){
+
+
+
+					$config['upload_path'] = 'asset/foto_galeri/';
+	        $config['allowed_types'] = 'gif|jpg|png|JPG|JPEG';
+	        $this->load->library('upload', $config);
+	        $this->upload->do_upload('gambar');
+	        $hasil22=$this->upload->data();
+          $config['source_image'] = 'asset/foto_galeri/'.$hasil22['file_name'];
+
+
+					if ($hasil22['file_name']=='' ){
+									$data = array(
+													'galeri_detail_tbl_judul'=>$this->db->escape_str($this->input->post('galeri_detail_tbl_judul')),
+													'galeri_detail_tbl_judul_seo'=>seo_title($this->input->post('galeri_detail_tbl_judul')),
+													'galeri_tbl_id_berita'=>$this->input->post('galeri_tbl_id_berita'));
+												}else {
+												$data = array(
+													'galeri_detail_tbl_judul'=>$this->db->escape_str($this->input->post('galeri_detail_tbl_judul')),
+													'galeri_detail_tbl_judul_seo'=>seo_title($this->input->post('galeri_detail_tbl_judul')),
+													'galeri_tbl_id_berita'=> $this->input->post('galeri_tbl_id_berita'),
+													'galeri_detail_tbl_gambar'=>$hasil22['file_name']);
+												}
+								$this->model_app->insert('galeri_detail_tbl',$data);
+								redirect('administrator/listgaleri/');
+				}else{
+					$data['galeri'] = $this->model_app->get_by_ids($ids,'id_berita','galeri_tbl');
+					$this->template->load('administrator/template','administrator/mod_galeri/view_tambah_detail',$data);
+				}
 	}
 
 

@@ -10,23 +10,10 @@
           echo "<div class='col-md-12'>
                   <table class='table table-condensed'>
                   <tbody>
-                    <input type='hidden' name='id' value=''>
                     <tr><th width='120px' scope='row'>Judul</th>    <td><input type='text' class='form-control' name='b' required></td></tr>
-                    <td><input type='hidden' class='form-control' name='a' value='1' required></td>                    
+                    <td><input type='hidden' class='form-control' name='a' value='1' required></td>
                     <tr><th scope='row'>Gambar 1</th>
                     <td><input type='file' class='form-control' name='img1'></td>
-                    </tr>
-                    <tr><th scope='row'>Gambar 2</th>
-                    <td><input type='file' class='form-control' name='img2'></td>
-                    </tr>
-                    <tr><th scope='row'>Gambar 3</th>
-                    <td><input type='file' class='form-control' name='img3'></td>
-                    </tr>
-                    <tr><th scope='row'>Gambar 4</th>
-                    <td><input type='file' class='form-control' name='img4'></td>
-                    </tr>
-                    <tr><th scope='row'>Gambar 5</th>
-                    <td><input type='file' class='form-control' name='img5'></td>
                     </tr>
                     <tr><th scope='row'>Meta Description</th>
                         <td><textarea class='form-control' name='meta' style='height:260px' required></textarea></td>

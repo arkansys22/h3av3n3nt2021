@@ -24,7 +24,7 @@
                               $row[judul]
                               </td>
                               <td><center>
-                              <a class='btn btn-primary btn-xs' title='Buka Data' href='".base_url()."administrator/listgaleri_detail/$row[judul_seo]'><span class='glyphicon glyphicon-open'></span></a>
+
                                 <a class='btn btn-success btn-xs' title='Edit Data' href='".base_url()."administrator/edit_listgaleri/$row[id_berita]'><span class='glyphicon glyphicon-edit'></span></a>
                                 <a class='btn btn-danger btn-xs' title='Delete Data' href='".base_url()."administrator/delete_listgaleri/$row[id_berita]' onclick=\"return confirm('Apa anda yakin untuk hapus Data ini?')\"><span class='glyphicon glyphicon-remove'></span></a>
                               </center></td>

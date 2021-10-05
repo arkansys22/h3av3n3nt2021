@@ -20,6 +20,13 @@ class Model_app extends CI_model{
         $this->db->or_where($judul_seo, $ids);
         return $this->db->get($table_nama)->row();
     }
+    function get_by_ids($id,$table_ids,$table_nama)
+    {
+
+        $this->db->where($table_ids, $id);
+        return $this->db->get($table_nama)->row();
+    }
+
     function get_by_id_post_2($ids)
      {
        $this->db->where($this->id, $ids);
