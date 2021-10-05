@@ -45,7 +45,7 @@ class Gallery extends CI_Controller {
 				$this->data['post_1']= $this->model_app->view_ordering_limits('kategori','id_kategori','DESC',$dari,$config['per_page']);
         $this->data['identitas']= $this->model_app->get_by_id_identitas($id='1');
         $this->data['selectgallery'] = 'active';
-				$this->data['post_galeri']= $this->model_app->view_where_orderings('galeri_tbl',array('id_kategori' => 1),'id_berita','DESC',$dari,'50');
+				$this->data['post_galeri']= $this->model_app->view_where_orderings('galeri_tbl',array('id_kategori' => 1),'id_berita','DESC',$dari,'250');
       }else{
 				redirect('main');
 			}
