@@ -551,7 +551,7 @@ class Administrator extends CI_Controller {
 		$id = $this->uri->segment(3);
 		if (isset($_POST['submit'])){
 
-			$config['upload_path'] = 'asset/foto_private/';
+					$config['upload_path'] = 'asset/foto_private/';
 	        $config['allowed_types'] = 'gif|jpg|png|JPG|JPEG';
 	        $config['max_size'] = '1000'; // kb
 	        $this->load->library('upload', $config);
@@ -597,6 +597,8 @@ class Administrator extends CI_Controller {
 																		'harga_min'=>$this->db->escape_str($this->input->post('hargamin')),
                                     'tag'=>$tag,
                                     'status'=>$status);
+																		$where = array('id_berita' => $this->input->post('id'));
+														 				$this->db->update('vendor_tbl', $data, $where);
             }
             else{
                     $data = array('id_kategori'=>$this->db->escape_str($this->input->post('a')),
@@ -610,9 +612,14 @@ class Administrator extends CI_Controller {
 																		'harga_min'=>$this->db->escape_str($this->input->post('hargamin')),
                                     'tag'=>$tag,
                                     'status'=>$status);
+																		$where = array('id_berita' => $this->input->post('id'));
+																		$_image = $this->db->get_where('vendor_tbl',$where)->row();
+																		$query = $this->db->update('vendor_tbl',$data,$where);
+																		if($query){
+																			unlink("asset/foto_private/".$_image->gambar);
+																		}
             }
-            $where = array('id_berita' => $this->input->post('id'));
-			$this->model_app->update('vendor_tbl', $data, $where);
+
 			redirect('administrator/list_pt');
 		}else{
 			$tag = $this->model_app->view_ordering('tag','id_tag','DESC');
@@ -639,12 +646,12 @@ class Administrator extends CI_Controller {
 	}
 	function delete_list_pt(){
 				cek_session_akses('list_pt',$this->session->id_session);
-				if ($this->session->level=='admin'){
-				$id = array('id_berita' => $this->uri->segment(3));
-				}else{
-						$id = array('id_berita' => $this->uri->segment(3), 'username'=>$this->session->username);
-				}
-		$this->model_app->delete('vendor_tbl',$id);
+				$id = $this->uri->segment(3);
+				$_id = $this->db->get_where('vendor_tbl',['id_berita' => $id])->row();
+				 $query = $this->db->delete('vendor_tbl',['id_berita'=>$id]);
+				if($query){
+								 unlink("./asset/foto_private/".$_id->foto_produk);
+			 }
 		redirect('administrator/list_pt');
 	}
 

@@ -19,8 +19,8 @@
                     <td><input type='hidden' class='form-control' name='a' value='1' required></td>
                     <tr><th scope='row'>Ganti Gambar</th>
                         <td><input type='file' class='form-control' name='gambar'>";
-                        if ($rows['gambar'] != ''){ echo "<i style='color:red'>Lihat Gambar Saat ini :
-                          </i><img width='620px' src='".base_url()."asset/foto_galeri/$rows[gambar]'>"; } echo "
+                        if ($rows['gambar'] != ''){ echo "<i style='color:red'>Ukuran file gambar terlalu besar mengakibatkan kinerja website menjadi lambat. Save for web file gambar yang ingin upload di photoshop.<br>Gambar Saat ini :</i><br>
+                        <img width='100%' src='".base_url()."asset/foto_galeri/$rows[gambar]'>"; } echo "
                         </td></tr>
                                         <tr><th scope='row'>Meta Description</th>
                                               <td><textarea class='form-control' name='meta' style='height:260px' required>$rows[meta_desc]</textarea></td>
