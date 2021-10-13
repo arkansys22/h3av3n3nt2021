@@ -13,10 +13,11 @@
                     <input type='hidden' name='id' value='$rows[id_kategori]'>
                     <tr><th width='120px' scope='row'>Judul Kategori</th>    <td><input type='text' class='form-control' name='a' value='$rows[nama_kategori]' required></td></tr>
                    <tr><th width='120px' scope='row'>Nama Kategori</th>    <td><input type='text' class='form-control' name='nama' value='$rows[nama]' required></td></tr>
-                    <tr><th scope='row'>Gambar</th>
+                    <tr><th scope='row'>Gambar<p>W:1920px H:1080px<br>(max 2 mb)</p></th>
                     <td><input type='file' class='form-control' name='img'>";
-                        if ($rows['gambar'] != ''){ echo "<i style='color:red'>Lihat Gambar Saat ini :
-                          </i><a target='_BLANK' href='".base_url()."asset/foto_privatetrip/$rows[gambar]'>$rows[gambar]</a>"; } echo "
+                        if ($rows['gambar'] != ''){ echo "<i style='color:red'>Ukuran file gambar terlalu besar mengakibatkan kinerja website menjadi lambat. Save for web file gambar yang ingin upload di photoshop.<br>Gambar Saat ini :
+                          </i>
+                          <img width='100%' src='".base_url()."asset/foto_privatetrip/$rows[gambar]'>$rows[gambar]"; } echo "
                         </td>
                     </tr>
                     <tr><th scope='row'>Konten</th>

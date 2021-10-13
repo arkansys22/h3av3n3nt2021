@@ -1,15 +1,15 @@
             <div class="col-xs-12">
               <div class="box">
                 <div class="box-header">
-                  <h3 class="box-title">Foto Slide</h3>
-                  <a class='pull-right btn btn-primary btn-sm' href='<?php echo base_url(); ?>administrator/tambah_listpromo'>Tambah Foto Slide</a>
+                  <h3 class="box-title">Artis Indonesia</h3>
+                  <a class='pull-right btn btn-primary btn-sm' href='<?php echo base_url(); ?>administrator/tambah_listpromo'>Tambah Artis Indonesia</a>
                 </div><!-- /.box-header -->
                 <div class="box-body">
                   <table id="example1" class="table table-bordered table-striped">
                     <thead>
                       <tr>
                         <th style='width:20px'>No</th>
-                        <th>Nama Foto Slide</th>
+                        <th>Judul</th>
                         <th style='width:75px'>Action</th>
                       </tr>
                     </thead>

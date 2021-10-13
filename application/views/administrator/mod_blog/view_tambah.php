@@ -12,14 +12,14 @@
                   <tbody>
                     <input type='hidden' name='id' value=''>
                     <tr><th width='120px' scope='row'>Judul</th>    <td><input type='text' class='form-control' name='b' required></td></tr>
-                    
+
                     <tr><th scope='row'>Konten</th>
                         <td><textarea id='editor1' class='form-control' name='h' style='height:260px' required></textarea></td>
                     </tr>
-                    <tr><th scope='row'>Gambar Lanscape</th>
-                    <td><input type='file' class='form-control' name='k'></td>
+                    <tr><th scope='row'>Gambar<p>W:19200px H:1080px<br>(max 2 mb)</p></th>
+                    <td><input type='file' class='form-control' name='k'><i style='color:red'>Ukuran file gambar terlalu besar mengakibatkan kinerja website menjadi lambat. Save for web file gambar yang ingin upload di photoshop.</i></td>
                     </tr>
-                 
+
                     <tr><th scope='row'>Meta Description</th>
                         <td><textarea class='form-control' name='meta' style='height:260px' required></textarea></td>
                     </tr>

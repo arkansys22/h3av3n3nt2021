@@ -2,7 +2,7 @@
     echo "<div class='col-md-12'>
               <div class='box box-info'>
                 <div class='box-header'>
-                  <h3 class='box-title'>Tambah Foto Slide Baru ".$this->session->disabled." </h3>
+                  <h3 class='box-title'>Tambah Artis Indonesia ".$this->session->disabled." </h3>
                 </div>
               <div class='box-body'>";
               $attributes = array('class'=>'form-horizontal','role'=>'form');
@@ -15,8 +15,8 @@
                     <tr><th scope='row'>Konten</th>
                         <td><textarea id='editor1' class='form-control' name='h' style='height:260px' required></textarea></td>
                     </tr>
-                    <tr><th scope='row'>Gambar Lansccape</th>
-                    <td><input type='file' class='form-control' name='k'></td>
+                    <tr><th scope='row'>Gambar<p>W:1500px H:1500px<br>(max 2 mb)</p></th>
+                    <td><input type='file' class='form-control' name='k'><i style='color:red'>Ukuran file gambar terlalu besar mengakibatkan kinerja website menjadi lambat. Save for web file gambar yang ingin upload di photoshop.</i></td>
                     </tr>
                     <tr><th scope='row'>URL</th>
                         <td><input type='text' class='form-control' name='ketgambar'></td>

@@ -2,7 +2,7 @@
     echo "<div class='col-md-12'>
               <div class='box box-info'>
                 <div class='box-header'>
-                  <h3 class='box-title'>Edit Foto Slide Terpilih</h3>
+                  <h3 class='box-title'>Edit Artis Indonesia</h3>
                 </div>
               <div class='box-body'>";
               $attributes = array('class'=>'form-horizontal','role'=>'form');
@@ -15,10 +15,10 @@
                     <tr><th scope='row'>Konten</th>
                         <td><textarea id='editor1' class='form-control' name='h' style='height:260px' required>$rows[konten]</textarea>
                     </td></tr>
-                   <tr><th scope='row'>Gambar Lansccape</th>
+                   <tr><th scope='row'>Gambar<p>W:1500px H:1500px<br>(max 2 mb)</p></th>
                         <td><input type='file' class='form-control' name='k'>";
-                        if ($rows['gambar'] != ''){ echo "<i style='color:red'>Lihat Gambar Saat ini :
-                          </i><a target='_BLANK' href='".base_url()."asset/foto_promo/$rows[gambar]'>$rows[gambar]</a>"; } echo "
+                        if ($rows['gambar'] != ''){ echo "<i style='color:red'>Ukuran file gambar terlalu besar mengakibatkan kinerja website menjadi lambat. Save for web file gambar yang ingin upload di photoshop. Lihat Gambar Saat ini :
+                          <img width='100%' src='".base_url()."asset/foto_promo/$rows[gambar]'>$rows[gambar]"; } echo "
                     </td></tr>
                         <tr><th scope='row'>URL</th>
                             <td><input type='text' class='form-control' value='$rows[keterangan_gambar]' name='ketgambar'></td>

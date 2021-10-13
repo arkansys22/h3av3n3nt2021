@@ -469,19 +469,12 @@ class Administrator extends CI_Controller {
 
 			$config['upload_path'] = 'asset/foto_private/';
 	        $config['allowed_types'] = 'gif|jpg|png|JPG|JPEG';
-	        $config['max_size'] = '1000'; // kb
+	        $config['max_size'] = '5000'; // kb
 	        $this->load->library('upload', $config);
 	        $this->upload->do_upload('k');
 	        $hasil=$this->upload->data();
           $config['source_image'] = 'asset/foto_private/'.$hasil['file_name'];
 
-			$config['upload_path'] = 'asset/foto_private/';
-	        $config['allowed_types'] = 'gif|jpg|png|JPG|JPEG';
-	        $config['max_size'] = '1000'; // kb
-	        $this->load->library('upload', $config);
-	        $this->upload->do_upload('img2');
-	        $img2=$this->upload->data();
-          $config['source_image'] = 'asset/foto_private/'.$img2['file_name'];
 
             if ($this->session->level == 'kontributor'){ $status = 'y'; }else{ $status = 'Y'; }
             if ($this->input->post('j')!=''){
@@ -553,7 +546,7 @@ class Administrator extends CI_Controller {
 
 					$config['upload_path'] = 'asset/foto_private/';
 	        $config['allowed_types'] = 'gif|jpg|png|JPG|JPEG';
-	        $config['max_size'] = '1000'; // kb
+	        $config['max_size'] = '5000'; // kb
 	        $this->load->library('upload', $config);
 	        $this->upload->do_upload('k');
 	        $hasil=$this->upload->data();
@@ -674,19 +667,12 @@ class Administrator extends CI_Controller {
 
 		    $config['upload_path'] = 'asset/foto_privatetrip/';
 	        $config['allowed_types'] = 'gif|jpg|png|JPG|JPEG';
-	        $config['max_size'] = '1000'; // kb
+	        $config['max_size'] = '5000'; // kb
 	        $this->load->library('upload', $config);
 	        $this->upload->do_upload('img');
 	        $hasil=$this->upload->data();
           $config['source_image'] = 'asset/foto_privatetrip/'.$hasil['file_name'];
 
-          $config['upload_path'] = 'asset/foto_privatetrip/';
-	        $config['allowed_types'] = 'gif|jpg|png|JPG|JPEG';
-	        $config['max_size'] = '1000'; // kb
-	        $this->load->library('upload', $config);
-	        $this->upload->do_upload('img2');
-	        $img2=$this->upload->data();
-          $config['source_image'] = 'asset/foto_privatetrip/'.$img2['file_name'];
 
 		    if ($this->input->post('j')!=''){
                 $tag_seo = $this->input->post('j');
@@ -746,19 +732,12 @@ class Administrator extends CI_Controller {
 		if (isset($_POST['submit'])){
 		    $config['upload_path'] = 'asset/foto_privatetrip/';
 	        $config['allowed_types'] = 'gif|jpg|png|JPG|JPEG';
-	        $config['max_size'] = '1000'; // kb
+	        $config['max_size'] = '5000'; // kb
 	        $this->load->library('upload', $config);
 	        $this->upload->do_upload('img');
 	        $hasil=$this->upload->data();
           $config['source_image'] = 'asset/foto_privatetrip/'.$hasil['file_name'];
 
-          $config['upload_path'] = 'asset/foto_privatetrip/';
-	        $config['allowed_types'] = 'gif|jpg|png|JPG|JPEG';
-	        $config['max_size'] = '1000'; // kb
-	        $this->load->library('upload', $config);
-	        $this->upload->do_upload('img2');
-	        $img2=$this->upload->data();
-          $config['source_image'] = 'asset/foto_privatetrip/'.$img2['file_name'];
 
 		    if ($this->input->post('j')!=''){
                 $tag_seo = $this->input->post('j');
@@ -1227,7 +1206,7 @@ class Administrator extends CI_Controller {
 
 					$config['upload_path'] = 'asset/foto_blogs/';
 					$config['allowed_types'] = 'gif|jpg|png|JPG|JPEG';
-					$config['max_size'] = '1000'; // kb
+					$config['max_size'] = '5000'; // kb
 					$this->load->library('upload', $config);
 					$this->upload->do_upload('k');
 					$hasil=$this->upload->data();
@@ -1763,7 +1742,7 @@ class Administrator extends CI_Controller {
 
 			$config['upload_path'] = 'asset/foto_promo/';
 	        $config['allowed_types'] = 'gif|jpg|png|JPG|JPEG';
-	        $config['max_size'] = '1000'; // kb
+	        $config['max_size'] = '5000'; // kb
 	        $this->load->library('upload', $config);
 	        $this->upload->do_upload('k');
 	        $hasil=$this->upload->data();
@@ -1812,7 +1791,7 @@ class Administrator extends CI_Controller {
 
 					$config['upload_path'] = 'asset/foto_promo/';
 					$config['allowed_types'] = 'gif|jpg|png|JPG|JPEG';
-					$config['max_size'] = '1000'; // kb
+					$config['max_size'] = '5000'; // kb
 					$this->load->library('upload', $config);
 					$this->upload->do_upload('k');
 					$hasil=$this->upload->data();

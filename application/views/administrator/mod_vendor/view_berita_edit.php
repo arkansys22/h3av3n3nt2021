@@ -26,7 +26,7 @@
                     <tr><th scope='row'>Deskripsi</th>
                         <td><textarea id='editor1' class='form-control' name='h' style='height:260px' required>$rows[konten]</textarea>
                     </td></tr>
-                    <tr><th scope='row'>Gambar <p>(max 2 mb)</p></th>
+                    <tr><th scope='row'>Gambar <p>W:1920px H:1080px<br>(max 2 mb)</p></th>
                         <td><input type='file' class='form-control' name='k'>";
                         if ($rows['gambar'] != ''){ echo "<i style='color:red'>Ukuran file gambar terlalu besar mengakibatkan kinerja website menjadi lambat. Save for web file gambar yang ingin upload di photoshop.<br>Gambar Saat ini :</i><br>
                           <img width='100%' src='".base_url()."asset/foto_private/$rows[gambar]'>"; } echo "

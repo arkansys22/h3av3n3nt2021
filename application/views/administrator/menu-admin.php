@@ -35,7 +35,7 @@
               if($cek==1 OR $this->session->level=='kontributor'){
                 echo "
                 <li><a href='".base_url()."administrator/testimoni'><i class='fa fa-rocket'></i> <span>Testimoni</span></a></li>
-                <li class='treeview'><a href='".base_url()."administrator/listpromo'><i class='fa fa-gift'></i>Foto Slide</a></li>
+                <li class='treeview'><a href='".base_url()."administrator/listpromo'><i class='fa fa-gift'></i>Artis Indonesia</a></li>
                 <li><a href='".base_url()."administrator/listgaleri'><i class='fa fa-file-photo-o'></i> <span>Galeri Foto</span></a></li>
                 <li><a href='".base_url()."administrator/listvideo'><i class='fa fa-file-photo-o'></i> <span>Galeri Video</span></a></li>
                  <li><a href='".base_url()."administrator/listblog'><i class='fa fa-newspaper-o'></i> <span>Blog</span></a></li>
@@ -46,7 +46,7 @@
               if($cek==1 OR $this->session->level=='admin'){
                 echo "
                 <li><a href='".base_url()."administrator/testimoni'><i class='fa fa-rocket'></i> <span>Testimoni</span></a></li>
-                <li class='treeview'><a href='".base_url()."administrator/listpromo'><i class='fa fa-gift'></i>Foto Slide</a></li>
+                <li class='treeview'><a href='".base_url()."administrator/listpromo'><i class='fa fa-gift'></i>Artis Indonesia</a></li>
                 <li><a href='".base_url()."administrator/listgaleri'><i class='fa fa-file-photo-o'></i> <span>Galeri Foto</span></a></li>
                 <li><a href='".base_url()."administrator/listvideo'><i class='fa fa-file-photo-o'></i> <span>Galeri Video</span></a></li>
                  <li><a href='".base_url()."administrator/listblog'><i class='fa fa-newspaper-o'></i> <span>Blog</span></a></li>

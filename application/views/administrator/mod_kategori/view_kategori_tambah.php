@@ -13,8 +13,10 @@
                     <input type='hidden' name='id' value=''>
                     <tr><th width='120px' scope='row'>Judul Kategori</th>    <td><input type='text' class='form-control' name='a' required></td></tr>
                     <tr><th width='120px' scope='row'>Nama Kategori</th>    <td><input type='text' class='form-control' name='nama' required></td></tr>
-                    <tr><th scope='row'>Gambar</th>
-                    <td><input type='file' class='form-control' name='img'></td>
+                    <tr><th scope='row'>Gambar<p>W:1920px H:1080px<br>(max 2 mb)</p></th>
+                    <td><input type='file' class='form-control' name='img'>
+                    <i style='color:red'>Ukuran file gambar terlalu besar mengakibatkan kinerja website menjadi lambat. Save for web file gambar yang ingin upload di photoshop.</i>
+                    </td>
                     </tr>
                     <tr><th scope='row'>Konten</th>
                         <td><textarea id='editor1' class='form-control' name='desc_kat' style='height:260px' required></textarea></td>
